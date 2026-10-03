@@ -149,3 +149,16 @@ dialog{background:linear-gradient(145deg,#172239,var(--sf));box-shadow:0 24px 80
 /* Deep Space Blue background (dark theme only) */
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]) body{background:radial-gradient(circle at 70% 20%,#18265A 0%,transparent 45%),radial-gradient(circle at 20% 70%,#171044 0%,transparent 50%),#070B17}}
 :root[data-theme="dark"] body{background:radial-gradient(circle at 70% 20%,#18265A 0%,transparent 45%),radial-gradient(circle at 20% 70%,#171044 0%,transparent 50%),#070B17}
+
+/* Today action + XP rules */
+.today-cta{display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin-top:6px}
+.today-cta .btn.big{min-height:52px;padding:0 30px;font-size:15px;letter-spacing:.05em}
+.today-cta .sub{margin:0}
+.xp-rules summary{cursor:pointer;list-style:none}
+.xp-rules summary::-webkit-details-marker{display:none}
+.xp-rules summary:focus-visible{outline:2px solid var(--ac);outline-offset:4px;border-radius:6px}
+.xp-rules ul{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:10px}
+.xp-rules li{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:10px 0;border-top:1px solid var(--ln)}
+.xp-rules li b{color:var(--xp);text-align:right}
+.xp-rules li small{grid-column:1/-1;color:var(--mu)}
+@media(max-width:760px){.xp-rules li{grid-template-columns:1fr}.xp-rules li b{text-align:left}}
